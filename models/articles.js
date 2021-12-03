@@ -6,7 +6,7 @@ const Articles = new mongoose.Schema({
   text: String,
   tags: [String],
   publish_date: { type: Date, default: Date.now },
-  comments: [CommentSchema],
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }],
 })
 
 Articles.method('toJSON', function () {

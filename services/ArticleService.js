@@ -13,7 +13,7 @@ class ArticleService {
     return this.model.findById(id)
   }
   update(id, data) {
-    return this.model.findByIdAndUpdate(id)
+    return this.model.findByIdAndUpdate(id, data)
   }
   destroy(id) {
     return this.model.findByIdAndDelete(id)

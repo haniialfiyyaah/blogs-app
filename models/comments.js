@@ -7,7 +7,7 @@ const Comments = new mongoose.Schema({
 })
 
 Comments.method('toJSON', function () {
-  const { _v, _id, ...object } = this.toObject()
+  const { __v, ...object } = this.toObject()
   return object // hide _id
 })
 

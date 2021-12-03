@@ -36,7 +36,7 @@ class ArticleController {
   static async update(req, res, next) {
     try {
       const articleService = new ArticleService(Articles)
-      const article = await articleService.update(req.params.id)
+      const article = await articleService.update(req.params.id, req.body)
       if (!article) return next({ name: 'NotFound' })
       res.status(200).json({ message: 'Success Update' })
     } catch (err) {

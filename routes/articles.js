@@ -10,6 +10,6 @@ router.post('/', ArticleController.create)
 router.patch('/:id', ArticleController.update)
 router.delete('/:id', ArticleController.destroy)
 
-router.use('/comments', comments)
+router.use('/', comments)
 
 module.exports = router
